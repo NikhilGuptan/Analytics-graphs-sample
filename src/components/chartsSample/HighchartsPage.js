@@ -9,6 +9,7 @@ import Drilldown from 'highcharts/modules/drilldown';
 const drilldownData = {
   drilldown: {
     series: [
+      // 2021 Drilldowns
       {
         id: '2021',
         name: 'Months in 2021',
@@ -28,25 +29,97 @@ const drilldownData = {
         ],
       },
       {
-        id: '2021-Jan-W1',
-        name: 'Days in Week 1 of January 2021',
-        data: [
-          ['Monday', 2],
-          ['Tuesday', 3],
-          ['Wednesday', 1],
-          ['Thursday', 2],
-          ['Friday', 2],
-          ['Saturday', 1],
-          ['Sunday', 1],
-        ],
-      },
-      {
         id: '2021-Feb',
         name: 'Weeks in February 2021',
         data: [
-          ['Week 1', 20],
-          ['Week 2', 10],
-          ['Week 3', 10],
+          { name: 'Week 1', y: 20 },
+          { name: 'Week 2', y: 10 },
+          { name: 'Week 3', y: 10 },
+        ],
+      },
+      {
+        id: '2021-Mar',
+        name: 'Weeks in March 2021',
+        data: [
+          { name: 'Week 1', y: 30 },
+          { name: 'Week 2', y: 20 },
+          { name: 'Week 3', y: 10 },
+        ],
+      },
+
+      // 2022 Drilldowns
+      {
+        id: '2022',
+        name: 'Months in 2022',
+        data: [
+          { name: 'January', y: 70, drilldown: '2022-Jan' },
+          { name: 'February', y: 60, drilldown: '2022-Feb' },
+          { name: 'March', y: 50, drilldown: '2022-Mar' },
+        ],
+      },
+      {
+        id: '2022-Jan',
+        name: 'Weeks in January 2022',
+        data: [
+          { name: 'Week 1', y: 25 },
+          { name: 'Week 2', y: 20 },
+          { name: 'Week 3', y: 25 },
+        ],
+      },
+      {
+        id: '2022-Feb',
+        name: 'Weeks in February 2022',
+        data: [
+          { name: 'Week 1', y: 20 },
+          { name: 'Week 2', y: 20 },
+          { name: 'Week 3', y: 20 },
+        ],
+      },
+      {
+        id: '2022-Mar',
+        name: 'Weeks in March 2022',
+        data: [
+          { name: 'Week 1', y: 15 },
+          { name: 'Week 2', y: 10 },
+          { name: 'Week 3', y: 25 },
+        ],
+      },
+
+      // 2023 Drilldowns
+      {
+        id: '2023',
+        name: 'Months in 2023',
+        data: [
+          { name: 'January', y: 80, drilldown: '2023-Jan' },
+          { name: 'February', y: 90, drilldown: '2023-Feb' },
+          { name: 'March', y: 100, drilldown: '2023-Mar' },
+        ],
+      },
+      {
+        id: '2023-Jan',
+        name: 'Weeks in January 2023',
+        data: [
+          { name: 'Week 1', y: 30 },
+          { name: 'Week 2', y: 40 },
+          { name: 'Week 3', y: 50 },
+        ],
+      },
+      {
+        id: '2023-Feb',
+        name: 'Weeks in February 2023',
+        data: [
+          { name: 'Week 1', y: 35 },
+          { name: 'Week 2', y: 30 },
+          { name: 'Week 3', y: 25 },
+        ],
+      },
+      {
+        id: '2023-Mar',
+        name: 'Weeks in March 2023',
+        data: [
+          { name: 'Week 1', y: 50 },
+          { name: 'Week 2', y: 40 },
+          { name: 'Week 3', y: 60 },
         ],
       },
     ],
