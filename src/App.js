@@ -3,10 +3,10 @@ import { BrowserRouter as Router, Route, Routes, Link, useLocation } from "react
 import RechartsPage from "./components/chartsSample/RechartsPage";
 import ChartJSPage from "./components/chartsSample/ChartJSPage";
 import D3Page from "./components/chartsSample/D3Page";
-import HighchartsPage from "./components/chartsSample/HighchartsPage";
 import VictoryPage from "./components/chartsSample/VictoryPage";
 import ReactVisPage from "./components/chartsSample/ReactVisPage";
 import EChartsPage from "./components/chartsSample/EChartsPage";
+import HighchartsDrilldown from "./components/chartsSample/HighchartsPage";
 
 const App = () => {
   const [selectedButton, setSelectedButton] = useState("");
@@ -87,10 +87,6 @@ const App = () => {
             </button>
           </Link>
 
-          {/* <Link to="/highcharts" style={{ textDecoration: "none", margin: "0 10px" }}>
-            <button>Highcharts</button>
-          </Link> */}
-
           <Link
             to="/react-vis"
             style={{
@@ -156,6 +152,28 @@ const App = () => {
               Victory
             </button>
           </Link>
+
+          <Link
+            to="/highcharts"
+            style={{
+              textDecoration: "none",
+              margin: "0 10px",
+            }}
+          >
+            <button
+              onClick={() => handleClick("highcharts")}
+              style={{
+                backgroundColor: selectedButton === "highcharts" ? "green" : "transparent",
+                color: selectedButton === "highcharts" ? "white" : "black",
+                padding: "10px 20px",
+                borderRadius: "5px",
+                border: "2px solid green",
+                cursor: "pointer",
+              }}
+            >
+              Highcharts with DrillDwon
+            </button>
+          </Link>
         </nav>
 
         {/* Routes */}
@@ -163,7 +181,7 @@ const App = () => {
           <Route path="/recharts" element={<RechartsPage />} />
           <Route path="/chartjs" element={<ChartJSPage />} />
           <Route path="/d3" element={<D3Page />} />
-          {/* <Route path="/highcharts" element={<HighchartsPage />} /> */}
+          <Route path="/highcharts" element={<HighchartsDrilldown />} />
           <Route path="/victory" element={<VictoryPage />} />
           <Route path="/echarts" element={<EChartsPage />} />
           <Route path="/react-vis" element={<ReactVisPage />} />

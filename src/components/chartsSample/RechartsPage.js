@@ -16,6 +16,7 @@ import {
   Legend,
 } from "recharts";
 import "./RechartsPage.css";
+import BarChartComponent from "./BarChart";
 
 const RechartsPage = () => {
   const data = [
@@ -137,6 +138,7 @@ const RechartsPage = () => {
           </AreaChart>
         </div>
       </div>
+      <BarChartComponent/>
     </div>
   );
 };
